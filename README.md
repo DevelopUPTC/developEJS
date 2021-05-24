@@ -9,16 +9,22 @@ Proyecto de Ejemplo para uso de NodeJS con Express y EJS como motor de vistas
 ├── index.js
 ├── package.json
 └── routes/
-  	├── index.js
+| 	├── index.js
 └── views/
-    ├── index.ejs
-    ├── insert.ejs
-    ├── about.ejs
-    └── templates/
-    		├── header.ejs
-    		├── navbar.ejs
-    		└── footer.ejs
-   
+|    ├── index.ejs
+|    ├── insert.ejs
+|    ├── about.ejs
+|    └── templates/
+|    		├── header.ejs
+|    		├── navbar.ejs
+|    		└── footer.ejs
+└── resources/
+    └── files/
+|    	└── colombia.js
+└── public/
+    └── js/
+    	└── scripts.js
+
 ```
 
 En la carpeta `templates` se encuentran las plantillas que se importarán en las diferentes parte de cada página o documento HTML para no repetir código
