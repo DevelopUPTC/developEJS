@@ -16,11 +16,18 @@ router.get('/insert',(req, res)=>{
 });
 
 router.post('/insert',(req,res)=>{
-    //let {code, name, gender} = req.body;
-    //let newReg = {code, name, gender};
-    //students.push(newReg);
-    console.log(req.body);
+    const{code, name, lastName, gender, dpto, town, email, phone } = req.body;
+    const dptoAux = colombia.departments.find( record => record.code == dpto ).name;
+    const townAux = colombia.towns.find( record => record.code == town ).name;
+    const city = townAux.concat( '-', dptoAux );
+    const genAux = gender == 'F' ? "Femenino" : "Masculino";
+    let newReg = {code, lastName, name, genAux, city, email, phone  };
+    students.push(newReg);
     res.redirect('/');
+});
+
+router.get('/about',(req,res)=>{
+   res.render('about',{title:"Sobre Nosotros"});
 });
 
 module.exports = router;
