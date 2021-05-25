@@ -14,13 +14,25 @@
                         <table class="table bm-2">
                             <thead>
                                 <th>Código</th>
-                                <th>Nombre</th>
+                                <th>Apellidos</th>
+                                <th>Nombres</th>
                                 <th>Ciudad</th>
-                                <th>Correo</th>
                                 <th>Teléfono</th>
+                                <th>Correo</th>
+                                <th>Género</th>
                             </thead>
                             <tbody>
-
+                                <% students.forEach(student => { %>
+                                    <tr>
+                                        <td><%= student.code %></td>
+                                        <td><%= student.lastName %></td>
+                                        <td><%= student.name %></td>
+                                        <td><%= student.city %></td>
+                                        <td><%= student.phone %></td>
+                                        <td><%= student.email %></td>
+                                        <td><%= student.genAux %></td>
+                                    </tr>
+                                <%})%>
                             </tbody>
                         </table>
                     <%}else{%>
